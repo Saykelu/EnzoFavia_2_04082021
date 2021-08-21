@@ -13,12 +13,18 @@
     --colorGray: #F2F2F2;
     --colorPink: rgb(247, 9, 167);
     --colorPurple: rgb(128, 3, 201);
+    --colorTurquoise: #09f9f9;
+    --colorPink2: #ff6cdb;
 }
 
 body {
     background-color: var(--colorBlue);
     max-width: 1440px;
     margin: auto; 
+}
+
+a {
+    text-decoration: none;
 }
 
 #container {
@@ -40,6 +46,27 @@ header {
     padding: 10px;
     font-style: italic;
     font-size: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul li a {
+    margin-right: 25px;
+    color: black;
+}
+
+nav ul li a:hover {
+    margin-right: 25px;
+    color: var(--colorBlue);
+    border-top: 2px solid var(--colorBlue);
+}
+
+ul.none {
+    flex-grow: 2;
 }
 
 main {
@@ -80,7 +107,19 @@ footer {
     padding: 10px;
     font-style: italic;
     font-size: 20px;
+    display: flex;
+    justify-content:space-around;   
 }
+
+footer ul li {
+    font-size: 25px;
+}
+
+footer ul li a {
+    font-size: 20px;
+    color: aqua;
+}
+
 
 @media screen and (min-width: 600px) and (max-width: 1000px) {
     body {
@@ -105,6 +144,18 @@ footer {
         "article1"
         "article2"
         "footer";
+    }
+    footer {
+        display: flex;
+        flex-direction: column;         
+    }
+
+    footer ul {
+        margin-top: 25px; 
+    }
+    
+    footer ul li {
+    
     }
     
 }
