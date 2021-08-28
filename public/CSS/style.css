@@ -18,7 +18,7 @@
 }
 
 body {
-    background-color: var(--colorBlue);
+    background-color: rgb(255, 255, 255);
     max-width: 1440px;
     margin: auto; 
 }
@@ -41,7 +41,7 @@ a {
 }
 
 header {
-    background-color: aquamarine;
+    background-color: rgb(255, 255, 255);
     grid-area: header;
     padding: 10px;
     font-style: italic;
@@ -70,19 +70,97 @@ ul.none {
 }
 
 main {
-    background-color: azure;
+    background-color: rgb(241, 188, 188);
     grid-area: main;
     padding: 10px;
     font-style: italic;
     font-size: 20px;
+    display: flex;  
 }
 
+main.filters {
+    background-color: rgb(151, 146, 146);
+    grid: filter;
+}
+
+.blockFilter {
+    display: flex;
+}
+
+.filter {
+    display: flex;
+} 
+
+main.filters .blockFilter .filter ul li {
+    display: flex;
+}
+
+#cardFilter {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    
+}
+
+
 article.article1 {
-    background-color: rgb(255, 157, 211);
+    background-color: rgb(233, 233, 233);
     grid-area: article1;
     padding: 10px;
     font-style: italic;
     font-size: 20px;
+    border-radius: 40px;
+}
+
+#cardsArticle1 {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 15px;
+}
+
+article.article1 h2 {
+    margin-left: 20px;
+}
+
+.cardArticle1 {
+    border: 5px solid rgb(255, 255, 255);
+    width: 240px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    box-shadow: 5px 5px 0px rgb(145, 145, 145);
+    transition: 400ms;
+    border-radius: 15px;
+    background: white;
+}
+
+.cardArticle1:hover {
+    box-shadow: 5px 5px 15px rgb(145, 145, 145);
+    transition: 400ms;
+    text-decoration: none;
+}
+
+.cardImage1 {
+    justify-content: center;    
+}
+
+.cardImage1 img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cardText1 {
+    width: 240px;
+    height: 140px;
+}
+
+article.article1 ul li a {
+    margin-left: 20px;
+    
 }
 
 aside {
@@ -94,7 +172,7 @@ aside {
 }
 
 article.article2 {
-    background-color: rgb(127, 114, 247);
+    background-color: rgb(255, 255, 255);
     grid-area: article2;
     padding: 10px;
     font-style: italic;
@@ -117,19 +195,19 @@ footer ul li {
 
 footer ul li a {
     font-size: 20px;
-    color: aqua;
+    color: rgb(0, 26, 255);
 }
 
 
 @media screen and (min-width: 600px) and (max-width: 1000px) {
     body {
-        background-color: var(--colorPink)
+        background-color: white;
     }
 }
 
 @media screen and (max-width: 599px) {
     body {
-        background-color: var(--colorPurple);
+        background-color: white;
 
     }
 
