@@ -4,13 +4,13 @@
 
 
 * {
-    font-family: 'Raleway', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Raleway', Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
 }
     
 :root {
     --colorBlue: #0065FC;
-    --colorWhite: #DEEBFF;
-    --colorGray: #F2F2F2;
+    --colorWhite: #ffffff;
+    --colorGray: #9b9b9b;
     --colorPink: rgb(247, 9, 167);
     --colorPurple: rgb(128, 3, 201);
     --colorTurquoise: #09f9f9;
@@ -20,11 +20,16 @@
 body {
     background-color: rgb(255, 255, 255);
     max-width: 1440px;
-    margin: auto; 
+    margin: auto;
 }
 
 a {
     text-decoration: none;
+}
+
+h1 {
+    font-style: italic;
+    font-size: 20px;
 }
 
 #container {
@@ -69,27 +74,66 @@ ul.none {
     flex-grow: 2;
 }
 
+ul.subscribe {
+    order: 1;
+}
+
+.subscribe {
+    color: var(--colorBlue);
+}
+
 main {
     background-color: rgb(241, 188, 188);
     grid-area: main;
     padding: 10px;
     font-style: italic;
     font-size: 20px;
-    display: flex;  
+    display: flex;
+    flex-direction: column;  
+}
+
+.titleMain {
+    display: flex;
+    flex-direction: column;
+}
+
+.titleMain p {
+    font-size: 16px;
+}
+
+.filterContenair {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
 }
 
 main.filters {
-    background-color: rgb(151, 146, 146);
+    background-color: rgb(255, 255, 255);
     grid: filter;
 }
 
 .blockFilter {
     display: flex;
+    
 }
 
 .filter {
     display: flex;
-} 
+    border: 1px solid rgb(0, 0, 0);
+    width: 240px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    transition: 400ms;
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    color: black;
+}
+
+.filter i {
+    color: var(--colorBlue);
+}
 
 main.filters .blockFilter .filter ul li {
     display: flex;
@@ -104,8 +148,8 @@ main.filters .blockFilter .filter ul li {
 }
 
 
-article.article1 {
-    background-color: rgb(233, 233, 233);
+article#article1 {
+    background-color: rgb(230, 230, 230);
     grid-area: article1;
     padding: 10px;
     font-style: italic;
@@ -132,13 +176,25 @@ article.article1 h2 {
     box-shadow: 5px 5px 0px rgb(145, 145, 145);
     transition: 400ms;
     border-radius: 15px;
-    background: white;
+    background: rgb(255, 255, 255);
+    color: black;
+}
+
+a {
+    text-decoration-line: none;
+}
+
+.blue {
+    color: var(--colorBlue);
+}
+
+.gray {
+    color: var(--colorGray);
 }
 
 .cardArticle1:hover {
     box-shadow: 5px 5px 15px rgb(145, 145, 145);
     transition: 400ms;
-    text-decoration: none;
 }
 
 .cardImage1 {
@@ -163,12 +219,48 @@ article.article1 ul li a {
     
 }
 
-aside {
-    background-color: rgb(158, 250, 130);
-    grid-area: aside;
+aside#aside1 {
+    background-color: rgb(182, 182, 182);
+    grid-area: article1;
     padding: 10px;
     font-style: italic;
     font-size: 20px;
+    border-radius: 40px;
+}
+
+#aside {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+
+}
+
+.cardAside1 {
+    display: flex;
+    flex-direction: row;
+    border: 5px solid rgb(255, 255, 255);
+    width: 510px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    box-shadow: 5px 5px 0px rgb(145, 145, 145);
+    transition: 400ms;
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+}
+
+ .cardImage2 img {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    height: 120px;
+    width: 150px;
+    object-fit: cover;
+}
+
+.cardAside1:hover {
+    box-shadow: 5px 5px 15px rgb(201, 201, 201);
+    transition: 400ms;
 }
 
 article.article2 {
@@ -177,10 +269,79 @@ article.article2 {
     padding: 10px;
     font-style: italic;
     font-size: 20px;
+    border-radius: 40px;
 }
 
+#cardsArticle3 {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 15px;
+}
+
+.cardArticle3 {
+    border: 5px solid rgb(255, 255, 255);
+    width: 240px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    box-shadow: 5px 5px 0px rgb(145, 145, 145);
+    transition: 400ms;
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    color: black;
+}
+
+.cardArticle4 {
+    border: 5px solid rgb(255, 255, 255);
+    width: 300px;
+    height: 500px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    box-shadow: 5px 5px 0px rgb(145, 145, 145);
+    transition: 400ms;
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    color: black;
+}
+
+.cardImage3 {
+    justify-content: center;
+}
+
+.cardImage3 img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 240px;
+    width: 350px;
+    object-fit: cover;
+}
+
+.cardImage4 {
+    justify-content: center;
+}
+
+.cardImage4 img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cardArticle3:hover {
+    box-shadow: 5px 5px 15px rgb(145, 145, 145);
+    transition: 400ms;
+}
+
+.cardArticle4:hover {
+    box-shadow: 5px 5px 15px rgb(145, 145, 145);
+    transition: 400ms;
+}
+
+
 footer {
-    background-color: rgb(243, 169, 120);
+    background-color: rgb(255, 255, 255);
     grid-area: footer;
     padding: 10px;
     font-style: italic;
@@ -195,7 +356,7 @@ footer ul li {
 
 footer ul li a {
     font-size: 20px;
-    color: rgb(0, 26, 255);
+    color: rgb(155, 155, 155);
 }
 
 
@@ -223,6 +384,43 @@ footer ul li a {
         "article2"
         "footer";
     }
+
+    header {
+        background-color: rgb(255, 255, 255);
+        grid-area: header;
+        padding: 10px;
+        font-style: italic;
+        font-size: 20px;
+    }
+    
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "logo subscribe"
+        "heberge activity";        
+    }
+
+    img.logo {
+        grid-area: logo;
+    }
+    
+    ul.none {
+        display: none;
+    }
+
+    ul.subscribe {
+        grid-area: subscribe;
+    }
+
+    ul.heberge {
+        grid-area: heberge;
+    }
+
+    ul.activity {
+        grid-area: activity;
+    }
+
     footer {
         display: flex;
         flex-direction: column;         
