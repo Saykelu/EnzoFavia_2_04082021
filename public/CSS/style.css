@@ -32,6 +32,12 @@ h1 {
     font-size: 20px;
 }
 
+h2 {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: bold;
+}
+
 #container {
     display: grid;
     grid-template-columns: 3fr 2fr;
@@ -110,20 +116,19 @@ main {
 
 main.filters {
     background-color: rgb(255, 255, 255);
-    grid: filter;
 }
 
 .blockFilter {
     display: flex;
-    
+    flex-wrap: wrap;    
 }
 
 .filter {
     display: flex;
     border: 1px solid rgb(0, 0, 0);
     width: 240px;
+    padding: 10px;
     margin-right: 20px;
-    margin-top: 20px;
     margin-left: 20px;
     transition: 400ms;
     border-radius: 15px;
@@ -139,6 +144,15 @@ main.filters .blockFilter .filter ul li {
     display: flex;
 }
 
+.blockFilter a {
+    padding: 10px;
+}
+
+.filterContenair h2 {
+    padding: 0;
+    margin: 0;
+}
+
 #cardFilter {
     padding: 20px;
     display: flex;
@@ -149,10 +163,9 @@ main.filters .blockFilter .filter ul li {
 
 
 article#article1 {
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(235, 235, 235);
     grid-area: article1;
     padding: 10px;
-    font-style: italic;
     font-size: 20px;
     border-radius: 40px;
 }
@@ -173,6 +186,7 @@ article.article1 h2 {
     margin-right: 20px;
     margin-top: 20px;
     margin-left: 20px;
+    margin-bottom: 20px;
     box-shadow: 5px 5px 0px rgb(145, 145, 145);
     transition: 400ms;
     border-radius: 15px;
@@ -215,25 +229,16 @@ a {
 }
 
 article.article1 ul li a {
-    margin-left: 20px;
-    
+    margin-left: 20px;   
 }
 
-aside#aside1 {
-    background-color: rgb(182, 182, 182);
-    grid-area: article1;
+aside.aside1 {
+    background-color: rgb(235, 235, 235);
+    grid-area: aside;
     padding: 10px;
-    font-style: italic;
     font-size: 20px;
     border-radius: 40px;
-}
-
-#aside {
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 20px;
-
+    margin: auto;
 }
 
 .cardAside1 {
@@ -243,6 +248,7 @@ aside#aside1 {
     width: 510px;
     margin-right: 20px;
     margin-top: 20px;
+    margin-bottom: 60px;
     margin-left: 20px;
     box-shadow: 5px 5px 0px rgb(145, 145, 145);
     transition: 400ms;
@@ -270,6 +276,63 @@ article.article2 {
     font-style: italic;
     font-size: 20px;
     border-radius: 40px;
+}
+
+.bigimg {
+    background-color: bisque;
+    display: flex;
+}
+
+.blocka {
+    background-color: chocolate;
+    display: flex;
+    width: 45%;
+}
+
+.blockc {
+    background-color: rgb(0, 255, 13);
+    width: 240px;
+}
+
+.blockd {
+    background-color: darkmagenta;
+}
+
+.blocke {
+    background-color: rgb(0, 153, 255);
+    width: 240px;
+}
+
+.blockf {
+    background-color: rgb(139, 0, 42);
+    width: 240px;
+}
+
+
+.block1 {
+    background-color: brown;
+    display: flex;
+    width: 45%;
+}
+
+.block2 {
+    background-color: rgb(251, 255, 0);
+    width: 240px;
+}
+
+.block3 {
+    background-color: rgb(0, 190, 41);
+    
+}
+
+.block4 {
+    background-color: rgb(0, 66, 207);
+    width: 240px;
+}
+
+.block5 {
+    background-color: rgb(255, 0, 221);
+    width: 240px;
 }
 
 #cardsArticle3 {
@@ -364,12 +427,90 @@ footer ul li a {
     body {
         background-color: white;
     }
+
+    #container {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: 1fr 3fr 4fr 4fr 1fr;
+        grid-template-areas:
+        "header header"
+        "main main"
+        "aside aside"
+        "article1 article1"
+        "article2 article2"
+        "footer footer";
+        height: 100vh;
+    }
+
+    .bigimg {
+        background-color: bisque;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .blocka {
+        background-color: chocolate;
+        display: flex;
+        width: 700px;
+    }
+    
+    .blockc {
+        background-color: rgb(0, 255, 13);
+        width: 240px;
+    }
+    
+    .blockd {
+        background-color: darkmagenta;
+    }
+    
+    .blocke {
+        background-color: rgb(0, 153, 255);
+        width: 240px;
+    }
+    
+    .blockf {
+        background-color: rgb(139, 0, 42);
+        width: 240px;
+    }
+    
+    
+    .block1 {
+        background-color: brown;
+        display: flex;
+        width: 700px;
+    }
+    
+    .block2 {
+        background-color: rgb(251, 255, 0);
+        width: 240px;
+    }
+    
+    .block3 {
+        background-color: rgb(0, 190, 41);
+        
+    }
+    
+    .block4 {
+        background-color: rgb(0, 66, 207);
+        width: 240px;
+    }
+    
+    .block5 {
+        background-color: rgb(255, 0, 221);
+        width: 240px;
+    }
 }
 
 @media screen and (max-width: 599px) {
     body {
         background-color: white;
 
+    }
+
+    h2 {
+        color: rgb(0, 0, 0);
+        font-size: 30px;
+        font-weight: bold;
     }
 
     #container {
@@ -385,6 +526,56 @@ footer ul li a {
         "footer";
     }
 
+    article#article1 {
+        margin: auto;
+    }
+
+    #cardsArticle1 {
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        
+    }
+
+    article.article1 h2 {
+        margin-left: 20px;
+    }
+    
+    .cardArticle1 {
+        border: 5px solid rgb(255, 255, 255);
+        width: 90%;
+        margin-right: 20px;
+        margin-top: 20px;
+        margin-left: 20px;
+        box-shadow: 5px 5px 0px rgb(145, 145, 145);
+        transition: 400ms;
+        border-radius: 15px;
+        background: rgb(255, 255, 255);
+        color: black;
+    }
+
+    .cardImage1 {
+        justify-content: center;    
+    }
+    
+    .cardImage1 img {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        height: 120px;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .cardText1 {
+        width: 240px;
+        height: 140px;
+    }
+    
+    article.article1 ul li a {
+        margin-left: 20px;
+        
+    }
+        
     header {
         background-color: rgb(255, 255, 255);
         grid-area: header;
@@ -421,10 +612,71 @@ footer ul li a {
         grid-area: activity;
     }
 
+    .bigimg {
+        background-color: bisque;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .blocka {
+        background-color: chocolate;
+        display: flex;
+        flex-wrap: wrap;
+        width: 300px;
+    }
+    
+    .blockc {
+        background-color: rgb(0, 255, 13);
+        width: 240px;
+    }
+    
+    .blockd {
+        background-color: darkmagenta;
+    }
+    
+    .blocke {
+        background-color: rgb(0, 153, 255);
+        width: 240px;
+    }
+    
+    .blockf {
+        background-color: rgb(139, 0, 42);
+        width: 240px;
+    }
+    
+    
+    .block1 {
+        background-color: brown;
+        display: flex;
+        flex-wrap: wrap;
+        width: 300px;
+    }
+    
+    .block2 {
+        background-color: rgb(251, 255, 0);
+        width: 240px;
+    }
+    
+    .block3 {
+        background-color: rgb(0, 190, 41);
+        
+    }
+    
+    .block4 {
+        background-color: rgb(0, 66, 207);
+        width: 240px;
+    }
+    
+    .block5 {
+        background-color: rgb(255, 0, 221);
+        width: 240px;
+    }
+
     footer {
         display: flex;
         flex-direction: column;         
     }
+
 
     footer ul {
         margin-top: 25px; 
