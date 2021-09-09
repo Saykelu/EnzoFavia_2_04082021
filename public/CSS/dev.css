@@ -1,0 +1,697 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+
+* {
+    font-family: 'Raleway', Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
+}
+    
+:root {
+    --colorBlue: #0065FC;
+    --colorWhite: #ffffff;
+    --colorGray: #9b9b9b;
+    --colorPink: rgb(247, 9, 167);
+    --colorPurple: rgb(128, 3, 201);
+    --colorTurquoise: #09f9f9;
+    --colorPink2: #ff6cdb;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    max-width: 1440px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-style: italic;
+    font-size: 20px;
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 3fr 4fr 4fr 1fr;
+    grid-template-areas:
+    "header header"
+    "main main"
+    "article1 aside"
+    "article2 article2"
+    "footer footer";
+    height: 100vh;
+}
+
+header {
+    background-color: rgb(255, 255, 255);
+    grid-area: header;
+    padding: 10px;
+    font-style: italic;
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul li a {
+    margin-right: 25px;
+    color: black;
+}
+
+nav ul li a:hover {
+    margin-right: 25px;
+    color: var(--colorBlue);
+    border-top: 2px solid var(--colorBlue);
+}
+
+ul.none {
+    flex-grow: 2;
+}
+
+ul.subscribe {
+    order: 1;
+}
+
+.subscribe {
+    color: var(--colorBlue);
+}
+
+main {
+    background-color: rgb(241, 188, 188);
+    grid-area: main;
+    padding: 10px;
+    font-style: italic;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;  
+}
+
+.titleMain {
+    display: flex;
+    flex-direction: column;
+}
+
+.titleMain p {
+    font-size: 16px;
+}
+
+.filterContenair {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+}
+
+main.filters {
+    background-color: rgb(255, 255, 255);
+}
+
+.blockFilter {
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+.filter {
+    display: flex;
+    border: 1px solid rgb(0, 0, 0);
+    width: 240px;
+    padding: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    transition: 400ms;
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    color: black;
+}
+
+.filter i {
+    color: var(--colorBlue);
+}
+
+main.filters .blockFilter .filter ul li {
+    display: flex;
+}
+
+.blockFilter a {
+    padding: 10px;
+}
+
+.filterContenair h2 {
+    padding: 0;
+    margin: 0;
+}
+
+#cardFilter {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    
+}
+
+
+article#article1 {
+    background-color: rgb(235, 235, 235);
+    grid-area: article1;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 40px;
+}
+
+#cardsArticle1 {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 15px;
+}
+
+article.article1 h2 {
+    margin-left: 20px;
+}
+
+.cardArticle1 {
+    border: 5px solid rgb(255, 255, 255);
+    width: 240px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 0px rgb(145, 145, 145);
+    transition: 400ms;
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    color: black;
+}
+
+a {
+    text-decoration-line: none;
+}
+
+.blue {
+    color: var(--colorBlue);
+}
+
+.gray {
+    color: var(--colorGray);
+}
+
+.cardArticle1:hover {
+    box-shadow: 5px 5px 15px rgb(145, 145, 145);
+    transition: 400ms;
+}
+
+.cardImage1 {
+    justify-content: center;    
+}
+
+.cardImage1 img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cardText1 {
+    width: 240px;
+    height: 140px;
+}
+
+article.article1 ul li a {
+    margin-left: 20px;   
+}
+
+aside.aside1 {
+    background-color: rgb(235, 235, 235);
+    grid-area: aside;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 40px;
+    margin: auto;
+}
+
+.cardAside1 {
+    display: flex;
+    flex-direction: row;
+    border: 5px solid rgb(255, 255, 255);
+    width: 510px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    margin-left: 20px;
+    box-shadow: 5px 5px 0px rgb(145, 145, 145);
+    transition: 400ms;
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+}
+
+ .cardImage2 img {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    height: 120px;
+    width: 150px;
+    object-fit: cover;
+}
+
+.cardAside1:hover {
+    box-shadow: 5px 5px 15px rgb(201, 201, 201);
+    transition: 400ms;
+}
+
+article.article2 {
+    background-color: rgb(255, 255, 255);
+    grid-area: article2;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 40px;
+}
+
+div.cardsArticle3container {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.block1 {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    width: 45%;
+    margin: auto;
+    max-width: 499px;
+}
+
+.card21 {
+    background-color: rgb(255, 255, 255);
+    width: 240px;
+}
+
+.card21:hover {
+    box-shadow: 5px 5px 15px rgb(145, 145, 145);
+    transition: 400ms;
+}
+
+.block1a {
+    background-color: rgb(255, 255, 255);
+}
+
+.card22 {
+    background-color: rgb(255, 255, 255);
+    width: 240px;
+}
+
+.card22:hover {
+    box-shadow: 5px 5px 15px rgb(145, 145, 145);
+    transition: 400ms;
+}
+
+.card23 {
+    background-color: rgb(255, 255, 255);
+    width: 240px;
+}
+
+.card23:hover {
+    box-shadow: 5px 5px 15px rgb(145, 145, 145);
+    transition: 400ms;
+}
+
+
+.block2 {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    width: 45%;
+    margin: auto;
+    max-width: 499px;
+}
+
+.card24 {
+    border: 5px solid rgb(255, 255, 255);
+    width: 300px;
+    box-shadow: 5px 5px 0px rgb(145, 145, 145);
+    transition: 400ms;
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    color: black;
+}
+
+.card24:hover {
+    box-shadow: 5px 5px 15px rgb(145, 145, 145);
+    transition: 400ms;
+}
+
+.block2a {
+    background-color: rgb(255, 255, 255);
+    margin-left: 100px;   
+}
+
+.card25 {
+    border: 5px solid rgb(255, 255, 255);
+    width: 100%;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    box-shadow: 5px 5px 0px rgb(145, 145, 145);
+    transition: 400ms;
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    color: black;
+}
+
+.card25:hover {
+    box-shadow: 5px 5px 15px rgb(145, 145, 145);
+    transition: 400ms;
+}
+
+.card26 {
+    border: 5px solid rgb(255, 255, 255);
+    width: 240px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    box-shadow: 5px 5px 0px rgb(145, 145, 145);
+    transition: 400ms;
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    color: black;
+}
+
+.card26:hover {
+    box-shadow: 5px 5px 15px rgb(145, 145, 145);
+    transition: 400ms;
+}
+/*
+.cardsArticle3 {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 15px;
+}
+
+.cardArticle3 {
+    border: 5px solid rgb(255, 255, 255);
+    width: 240px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    box-shadow: 5px 5px 0px rgb(145, 145, 145);
+    transition: 400ms;
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    color: black;
+}
+
+.cardArticle4 {
+    border: 5px solid rgb(255, 255, 255);
+    width: 300px;
+    height: 500px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    box-shadow: 5px 5px 0px rgb(145, 145, 145);
+    transition: 400ms;
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    color: black;
+}*/
+
+.cardImage3 {
+    justify-content: center;
+}
+
+.cardImage3 img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 140px;
+    width: 300px;
+    object-fit: cover;
+}
+
+.cardImage4 {
+    justify-content: center;
+}
+
+.cardImage4 img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 390px;
+    width: 100%;
+    object-fit: cover;
+}
+
+footer {
+    background-color: rgb(255, 255, 255);
+    grid-area: footer;
+    padding: 10px;
+    font-style: italic;
+    font-size: 20px;
+    display: flex;
+    justify-content:space-around;   
+}
+
+footer ul li {
+    font-size: 25px;
+}
+
+footer ul li a {
+    font-size: 20px;
+    color: rgb(155, 155, 155);
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+    body {
+        background-color: white;
+    }
+
+    #container {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: 1fr 3fr 4fr 4fr 1fr;
+        grid-template-areas:
+        "header header"
+        "main main"
+        "aside aside"
+        "article1 article1"
+        "article2 article2"
+        "footer footer";
+        height: 100vh;
+    }
+   
+    .cardsArticle3container {
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .block1 {
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        width: 45%;
+        margin: auto;
+    }
+
+    .block2 {
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        width: 45%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    body {
+        background-color: white;
+
+    }
+
+    h2 {
+        color: rgb(0, 0, 0);
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    #container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 2fr 4fr 4fr 1fr;
+        grid-template-areas:
+        "header"
+        "main"
+        "aside"
+        "article1"
+        "article2"
+        "footer";
+    }
+
+    article#article1 {
+        margin: auto;
+    }
+
+    #cardsArticle1 {
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        
+    }
+
+    article.article1 h2 {
+        margin-left: 20px;
+    }
+    
+    .cardArticle1 {
+        border: 5px solid rgb(255, 255, 255);
+        width: 90%;
+        margin-right: 20px;
+        margin-top: 20px;
+        margin-left: 20px;
+        box-shadow: 5px 5px 0px rgb(145, 145, 145);
+        transition: 400ms;
+        border-radius: 15px;
+        background: rgb(255, 255, 255);
+        color: black;
+    }
+
+    .cardImage1 {
+        justify-content: center;    
+    }
+    
+    .cardImage1 img {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        height: 120px;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .cardText1 {
+        width: 240px;
+        height: 140px;
+    }
+    
+    article.article1 ul li a {
+        margin-left: 20px;
+        
+    }
+        
+    header {
+        background-color: rgb(255, 255, 255);
+        grid-area: header;
+        padding: 10px;
+        font-style: italic;
+        font-size: 20px;
+    }
+    
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "logo subscribe"
+        "heberge activity";        
+    }
+
+    img.logo {
+        grid-area: logo;
+    }
+    
+    ul.none {
+        display: none;
+    }
+
+    ul.subscribe {
+        grid-area: subscribe;
+    }
+
+    ul.heberge {
+        grid-area: heberge;
+    }
+
+    ul.activity {
+        grid-area: activity;
+    }
+
+    .cardsArticle3container {
+        background-color: bisque;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .block2 {
+        background-color: chocolate;
+        display: flex;
+        flex-wrap: wrap;
+        width: 300px;
+    }
+    
+    .blockc {
+        background-color: rgb(0, 255, 13);
+        width: 240px;
+    }
+    
+    .blockd {
+        background-color: darkmagenta;
+    }
+    
+    .blocke {
+        background-color: rgb(0, 153, 255);
+        width: 240px;
+    }
+    
+    .blockf {
+        background-color: rgb(139, 0, 42);
+        width: 240px;
+    }
+    
+    
+    .block1 {
+        background-color: brown;
+        display: flex;
+        flex-wrap: wrap;
+        width: 300px;
+    }
+    
+    .block2 {
+        background-color: rgb(251, 255, 0);
+        width: 240px;
+    }
+    
+    .block3 {
+        background-color: rgb(0, 190, 41);
+        
+    }
+    
+    .block4 {
+        background-color: rgb(0, 66, 207);
+        width: 240px;
+    }
+    
+    .block5 {
+        background-color: rgb(255, 0, 221);
+        width: 240px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;         
+    }
+
+
+    footer ul {
+        margin-top: 25px; 
+    }
+    
+    footer ul li {
+    
+    }
+    
+}
