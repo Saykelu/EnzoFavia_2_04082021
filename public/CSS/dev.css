@@ -510,6 +510,7 @@ footer ul li a {
 }
 
 @media screen and (max-width: 599px) {
+    
     body {
         background-color: white;
 
@@ -685,13 +686,8 @@ footer ul li a {
         flex-direction: column;         
     }
 
-
     footer ul {
         margin-top: 25px; 
     }
-    
-    footer ul li {
-    
-    }
-    
+        
 }
