@@ -391,11 +391,6 @@ div.cardsArticle3container {
     transition: 400ms;
 }
 /*
-.cardsArticle3 {
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 15px;
-}
 
 .cardArticle3 {
     border: 5px solid rgb(255, 255, 255);
