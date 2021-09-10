@@ -98,6 +98,27 @@ main {
     flex-direction: column;  
 }
 
+.search input {
+    width: 180px;
+    padding: 10px;
+    color: black;
+}
+
+button {
+    width: 100px;
+    padding: 10px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: var(--colorBlue);
+    color: rgb(255, 255, 255);
+}
+
+button p {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
 .titleMain {
     display: flex;
     flex-direction: column;
@@ -138,6 +159,9 @@ main.filters {
 
 .filter i {
     color: var(--colorBlue);
+    width: 30px;
+    border-radius: 15px;
+    background: rgb(136, 200, 253);
 }
 
 main.filters .blockFilter .filter ul li {
@@ -280,7 +304,7 @@ article.article2 {
 div.cardsArticle3container {
     background-color: rgb(255, 255, 255);
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: raw;
     margin: auto;
 }
 
@@ -288,13 +312,17 @@ div.cardsArticle3container {
     background-color: rgb(255, 255, 255);
     display: flex;
     width: 45%;
-    margin: auto;
     max-width: 499px;
 }
 
 .card21 {
-    background-color: rgb(255, 255, 255);
-    width: 240px;
+    border: 5px solid rgb(255, 255, 255);
+    width: 300px;
+    box-shadow: 5px 5px 0px rgb(145, 145, 145);
+    transition: 400ms;
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    color: black;
 }
 
 .card21:hover {
@@ -307,8 +335,14 @@ div.cardsArticle3container {
 }
 
 .card22 {
-    background-color: rgb(255, 255, 255);
-    width: 240px;
+    border: 5px solid rgb(255, 255, 255);
+    width: 250%;
+    margin-top: 20px;
+    box-shadow: 5px 5px 0px rgb(145, 145, 145);
+    transition: 400ms;
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    color: black;
 }
 
 .card22:hover {
@@ -317,8 +351,14 @@ div.cardsArticle3container {
 }
 
 .card23 {
-    background-color: rgb(255, 255, 255);
-    width: 240px;
+    border: 5px solid rgb(255, 255, 255);
+    width: 250%;
+    margin-top: 20px;
+    box-shadow: 5px 5px 0px rgb(145, 145, 145);
+    transition: 400ms;
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    color: black;
 }
 
 .card23:hover {
@@ -357,10 +397,8 @@ div.cardsArticle3container {
 
 .card25 {
     border: 5px solid rgb(255, 255, 255);
-    width: 100%;
-    margin-right: 20px;
+    width: 250%;
     margin-top: 20px;
-    margin-left: 20px;
     box-shadow: 5px 5px 0px rgb(145, 145, 145);
     transition: 400ms;
     border-radius: 15px;
@@ -375,10 +413,8 @@ div.cardsArticle3container {
 
 .card26 {
     border: 5px solid rgb(255, 255, 255);
-    width: 240px;
-    margin-right: 20px;
+    width: 250%;
     margin-top: 20px;
-    margin-left: 20px;
     box-shadow: 5px 5px 0px rgb(145, 145, 145);
     transition: 400ms;
     border-radius: 15px;
@@ -615,64 +651,130 @@ footer ul li a {
         grid-area: activity;
     }
 
-    .cardsArticle3container {
-        background-color: bisque;
+    div.cardsArticle3container {
+        background-color: rgb(255, 255, 255);
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        margin: auto;
     }
-    
-    .block2 {
-        background-color: chocolate;
-        display: flex;
-        flex-wrap: wrap;
-        width: 300px;
-    }
-    
-    .blockc {
-        background-color: rgb(0, 255, 13);
-        width: 240px;
-    }
-    
-    .blockd {
-        background-color: darkmagenta;
-    }
-    
-    .blocke {
-        background-color: rgb(0, 153, 255);
-        width: 240px;
-    }
-    
-    .blockf {
-        background-color: rgb(139, 0, 42);
-        width: 240px;
-    }
-    
     
     .block1 {
-        background-color: brown;
+        background-color: rgb(255, 255, 255);
         display: flex;
-        flex-wrap: wrap;
-        width: 300px;
+        width: 45%;
+        max-width: 499px;
     }
+    
+    .card21 {
+        border: 5px solid rgb(255, 255, 255);
+        width: 300px;
+        box-shadow: 5px 5px 0px rgb(145, 145, 145);
+        transition: 400ms;
+        border-radius: 15px;
+        background: rgb(255, 255, 255);
+        color: black;
+    }
+    
+    .card21:hover {
+        box-shadow: 5px 5px 15px rgb(145, 145, 145);
+        transition: 400ms;
+    }
+    
+    .block1a {
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .card22 {
+        border: 5px solid rgb(255, 255, 255);
+        width: 250%;
+        margin-top: 20px;
+        box-shadow: 5px 5px 0px rgb(145, 145, 145);
+        transition: 400ms;
+        border-radius: 15px;
+        background: rgb(255, 255, 255);
+        color: black;
+    }
+    
+    .card22:hover {
+        box-shadow: 5px 5px 15px rgb(145, 145, 145);
+        transition: 400ms;
+    }
+    
+    .card23 {
+        border: 5px solid rgb(255, 255, 255);
+        width: 250%;
+        margin-top: 20px;
+        box-shadow: 5px 5px 0px rgb(145, 145, 145);
+        transition: 400ms;
+        border-radius: 15px;
+        background: rgb(255, 255, 255);
+        color: black;
+    }
+    
+    .card23:hover {
+        box-shadow: 5px 5px 15px rgb(145, 145, 145);
+        transition: 400ms;
+    }
+    
     
     .block2 {
-        background-color: rgb(251, 255, 0);
-        width: 240px;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        width: 45%;
+        margin: auto;
+        max-width: 499px;
     }
     
-    .block3 {
-        background-color: rgb(0, 190, 41);
-        
+    .card24 {
+        border: 5px solid rgb(255, 255, 255);
+        width: 300px;
+        box-shadow: 5px 5px 0px rgb(145, 145, 145);
+        transition: 400ms;
+        border-radius: 15px;
+        background: rgb(255, 255, 255);
+        color: black;
     }
     
-    .block4 {
-        background-color: rgb(0, 66, 207);
-        width: 240px;
+    .card24:hover {
+        box-shadow: 5px 5px 15px rgb(145, 145, 145);
+        transition: 400ms;
     }
     
-    .block5 {
-        background-color: rgb(255, 0, 221);
-        width: 240px;
+    .block2a {
+        background-color: rgb(255, 255, 255);
+        margin-left: 100px;   
+    }
+    
+    .card25 {
+        border: 5px solid rgb(255, 255, 255);
+        width: 250%;
+        margin-top: 20px;
+        box-shadow: 5px 5px 0px rgb(145, 145, 145);
+        transition: 400ms;
+        border-radius: 15px;
+        background: rgb(255, 255, 255);
+        color: black;
+    }
+    
+    .card25:hover {
+        box-shadow: 5px 5px 15px rgb(145, 145, 145);
+        transition: 400ms;
+    }
+    
+    .card26 {
+        border: 5px solid rgb(255, 255, 255);
+        width: 250%;
+        margin-top: 20px;
+        box-shadow: 5px 5px 0px rgb(145, 145, 145);
+        transition: 400ms;
+        border-radius: 15px;
+        background: rgb(255, 255, 255);
+        color: black;
+    }
+    
+    .card26:hover {
+        box-shadow: 5px 5px 15px rgb(145, 145, 145);
+        transition: 400ms;
     }
 
     footer {
