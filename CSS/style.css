@@ -28,8 +28,8 @@ a {
 }
 
 h1 {
-    font-style: italic;
     font-size: 20px;
+    font-weight: bold;
 }
 
 h2 {
@@ -55,7 +55,6 @@ header {
     background-color: rgb(255, 255, 255);
     grid-area: header;
     padding: 10px;
-    font-style: italic;
     font-size: 20px;
 }
 
@@ -92,7 +91,6 @@ main {
     background-color: rgb(241, 188, 188);
     grid-area: main;
     padding: 10px;
-    font-style: italic;
     font-size: 20px;
     display: flex;
     flex-direction: column;  
@@ -124,6 +122,7 @@ button p {
     flex-direction: column;
 }
 
+
 .titleMain p {
     font-size: 16px;
 }
@@ -135,24 +134,25 @@ button p {
     margin-left: 20px;
 }
 
+
 main.filters {
     background-color: rgb(255, 255, 255);
 }
 
 .blockFilter {
     display: flex;
-    flex-wrap: wrap;    
+      
 }
 
 .filter {
     display: flex;
     border: 1px solid rgb(0, 0, 0);
     width: 240px;
-    padding: 10px;
+    padding: 4px;
     margin-right: 20px;
     margin-left: 20px;
     transition: 400ms;
-    border-radius: 15px;
+    border-radius: 25px;
     background: rgb(255, 255, 255);
     color: black;
 }
@@ -160,6 +160,7 @@ main.filters {
 .filter i {
     color: var(--colorBlue);
     width: 30px;
+    padding: auto;
     border-radius: 15px;
     background: rgb(136, 200, 253);
 }
