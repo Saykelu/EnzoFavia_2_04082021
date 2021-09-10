@@ -30,6 +30,7 @@ a {
 h1 {
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 
 h2 {
@@ -40,6 +41,7 @@ h2 {
 
 #container {
     display: grid;
+    margin: auto;
     grid-template-columns: 3fr 2fr;
     grid-template-rows: 1fr 3fr 4fr 4fr 1fr;
     grid-template-areas:
@@ -96,13 +98,21 @@ main {
     flex-direction: column;  
 }
 
-.search input {
+#search {
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+}
+
+#search input {
     width: 180px;
     padding: 10px;
     color: black;
+    margin-left: 10px;
 }
 
-button {
+.searchText {
+    display: block;
     width: 100px;
     padding: 10px;
     border-top-right-radius: 15px;
@@ -111,11 +121,9 @@ button {
     color: rgb(255, 255, 255);
 }
 
-button p {
-    font-weight: bold;
-    font-size: 16px;
+.searchIcon {
+    display: none;
 }
-
 
 .titleMain {
     display: flex;
@@ -146,9 +154,9 @@ main.filters {
 
 .filter {
     display: flex;
-    border: 1px solid rgb(0, 0, 0);
+    align-items: center;
+    border: 2px solid rgb(177, 177, 177);
     width: 240px;
-    padding: 4px;
     margin-right: 20px;
     margin-left: 20px;
     transition: 400ms;
@@ -157,12 +165,25 @@ main.filters {
     color: black;
 }
 
+.filter p {
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+.iconFilter {
+    display: inline-block;
+    text-align: center;
+    padding: 0.5em 0.5em; 
+    background-color: rgb(214, 237, 255);
+    border-radius: 50%;
+    margin-left: -3px;
+}
+
 .filter i {
     color: var(--colorBlue);
     width: 30px;
     padding: auto;
-    border-radius: 15px;
-    background: rgb(136, 200, 253);
+    font-size: 20px;  
 }
 
 main.filters .blockFilter .filter ul li {
@@ -312,13 +333,13 @@ div.cardsArticle3container {
 .block1 {
     background-color: rgb(255, 255, 255);
     display: flex;
-    width: 45%;
-    max-width: 499px;
+    margin-right: 20px;
+   
 }
 
 .card21 {
     border: 5px solid rgb(255, 255, 255);
-    width: 300px;
+    width: 100%;
     box-shadow: 5px 5px 0px rgb(145, 145, 145);
     transition: 400ms;
     border-radius: 15px;
@@ -337,7 +358,7 @@ div.cardsArticle3container {
 
 .card22 {
     border: 5px solid rgb(255, 255, 255);
-    width: 250%;
+    width: 100%;
     margin-top: 20px;
     box-shadow: 5px 5px 0px rgb(145, 145, 145);
     transition: 400ms;
@@ -353,7 +374,7 @@ div.cardsArticle3container {
 
 .card23 {
     border: 5px solid rgb(255, 255, 255);
-    width: 250%;
+    width: 100%;
     margin-top: 20px;
     box-shadow: 5px 5px 0px rgb(145, 145, 145);
     transition: 400ms;
@@ -371,14 +392,13 @@ div.cardsArticle3container {
 .block2 {
     background-color: rgb(255, 255, 255);
     display: flex;
-    width: 45%;
     margin: auto;
-    max-width: 499px;
+    margin-left: 20px;    
 }
 
 .card24 {
     border: 5px solid rgb(255, 255, 255);
-    width: 300px;
+    width: 100%;
     box-shadow: 5px 5px 0px rgb(145, 145, 145);
     transition: 400ms;
     border-radius: 15px;
@@ -392,13 +412,12 @@ div.cardsArticle3container {
 }
 
 .block2a {
-    background-color: rgb(255, 255, 255);
-    margin-left: 100px;   
+    background-color: rgb(255, 255, 255); 
 }
 
 .card25 {
     border: 5px solid rgb(255, 255, 255);
-    width: 250%;
+    width: 100%;
     margin-top: 20px;
     box-shadow: 5px 5px 0px rgb(145, 145, 145);
     transition: 400ms;
@@ -414,7 +433,7 @@ div.cardsArticle3container {
 
 .card26 {
     border: 5px solid rgb(255, 255, 255);
-    width: 250%;
+    width: 100%;
     margin-top: 20px;
     box-shadow: 5px 5px 0px rgb(145, 145, 145);
     transition: 400ms;
@@ -427,34 +446,6 @@ div.cardsArticle3container {
     box-shadow: 5px 5px 15px rgb(145, 145, 145);
     transition: 400ms;
 }
-/*
-
-.cardArticle3 {
-    border: 5px solid rgb(255, 255, 255);
-    width: 240px;
-    margin-right: 20px;
-    margin-top: 20px;
-    margin-left: 20px;
-    box-shadow: 5px 5px 0px rgb(145, 145, 145);
-    transition: 400ms;
-    border-radius: 15px;
-    background: rgb(255, 255, 255);
-    color: black;
-}
-
-.cardArticle4 {
-    border: 5px solid rgb(255, 255, 255);
-    width: 300px;
-    height: 500px;
-    margin-right: 20px;
-    margin-top: 20px;
-    margin-left: 20px;
-    box-shadow: 5px 5px 0px rgb(145, 145, 145);
-    transition: 400ms;
-    border-radius: 15px;
-    background: rgb(255, 255, 255);
-    color: black;
-}*/
 
 .cardImage3 {
     justify-content: center;
@@ -476,7 +467,7 @@ div.cardsArticle3container {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     height: 390px;
-    width: 100%;
+    width: 300px;
     object-fit: cover;
 }
 
@@ -499,10 +490,10 @@ footer ul li a {
     color: rgb(155, 155, 155);
 }
 
+@media screen and (min-width: 376px) and (max-width: 980px) {
 
-@media screen and (min-width: 600px) and (max-width: 1000px) {
     body {
-        background-color: white;
+        background-color: rgb(255, 255, 255);
     }
 
     #container {
@@ -518,6 +509,25 @@ footer ul li a {
         "footer footer";
         height: 100vh;
     }
+
+    .searchText {
+        display: none;
+    }
+
+    .searchIcon {
+        display: block;
+        width: 40px;
+        padding: 10px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        background: var(--colorBlue);
+        color: rgb(255, 255, 255);
+    }
+
+    .blockFilter {
+        display: flex;
+        flex-wrap: wrap;
+    }
    
     .cardsArticle3container {
         background-color: rgb(255, 255, 255);
@@ -529,28 +539,44 @@ footer ul li a {
     .block1 {
         background-color: rgb(255, 255, 255);
         display: flex;
-        width: 45%;
+        width: 90%;
         margin: auto;
+        margin-bottom: 20px;
+        margin-left: 130px;
     }
 
     .block2 {
         background-color: rgb(255, 255, 255);
         display: flex;
-        width: 45%;
+        width: 90%;
         margin: auto;
+        margin-bottom: 20px;
+        margin-left: 130px;
     }
-}
 
-@media screen and (max-width: 599px) {
-    body {
-        background-color: white;
+    .block2a {
+        margin-left: 30px;
+    }
 
+    aside.aside1 {
+       width: 100%;      
     }
 
     h2 {
-        color: rgb(0, 0, 0);
-        font-size: 30px;
-        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    .cardAside1 {
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+
+    body {
+        background-color: rgb(255, 255, 255);
     }
 
     #container {
@@ -564,6 +590,25 @@ footer ul li a {
         "article1"
         "article2"
         "footer";
+    }
+
+    .searchIcon {
+        display: block;
+        width: 40px;
+        padding: 10px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        background: var(--colorBlue);
+        color: rgb(255, 255, 255);
+    }
+
+    .searchText {
+        display: none;
+    }
+
+    .blockFilter {
+        display: flex;
+        flex-wrap: wrap;
     }
 
     article#article1 {
@@ -610,11 +655,6 @@ footer ul li a {
         width: 240px;
         height: 140px;
     }
-    
-    article.article1 ul li a {
-        margin-left: 20px;
-        
-    }
         
     header {
         background-color: rgb(255, 255, 255);
@@ -650,25 +690,29 @@ footer ul li a {
 
     ul.activity {
         grid-area: activity;
-    }
+    }    
 
     div.cardsArticle3container {
         background-color: rgb(255, 255, 255);
         display: flex;
         flex-direction: column;
         margin: auto;
+        margin-bottom: 20px;
     }
-    
+
     .block1 {
         background-color: rgb(255, 255, 255);
         display: flex;
-        width: 45%;
-        max-width: 499px;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+        
     }
     
     .card21 {
         border: 5px solid rgb(255, 255, 255);
-        width: 300px;
+        width: 100%;
         box-shadow: 5px 5px 0px rgb(145, 145, 145);
         transition: 400ms;
         border-radius: 15px;
@@ -687,8 +731,8 @@ footer ul li a {
     
     .card22 {
         border: 5px solid rgb(255, 255, 255);
-        width: 250%;
-        margin-top: 20px;
+        width: 100%;
+        margin-bottom: 20px;
         box-shadow: 5px 5px 0px rgb(145, 145, 145);
         transition: 400ms;
         border-radius: 15px;
@@ -703,7 +747,7 @@ footer ul li a {
     
     .card23 {
         border: 5px solid rgb(255, 255, 255);
-        width: 250%;
+        width: 100%;
         margin-top: 20px;
         box-shadow: 5px 5px 0px rgb(145, 145, 145);
         transition: 400ms;
@@ -721,14 +765,13 @@ footer ul li a {
     .block2 {
         background-color: rgb(255, 255, 255);
         display: flex;
-        width: 45%;
-        margin: auto;
-        max-width: 499px;
+        flex-direction: column;
+        margin-top: 25px;
     }
     
     .card24 {
         border: 5px solid rgb(255, 255, 255);
-        width: 300px;
+        width: 100%;
         box-shadow: 5px 5px 0px rgb(145, 145, 145);
         transition: 400ms;
         border-radius: 15px;
@@ -743,12 +786,12 @@ footer ul li a {
     
     .block2a {
         background-color: rgb(255, 255, 255);
-        margin-left: 100px;   
+        margin-top: 15px;  
     }
     
     .card25 {
         border: 5px solid rgb(255, 255, 255);
-        width: 250%;
+        width: 100%;
         margin-top: 20px;
         box-shadow: 5px 5px 0px rgb(145, 145, 145);
         transition: 400ms;
@@ -764,7 +807,7 @@ footer ul li a {
     
     .card26 {
         border: 5px solid rgb(255, 255, 255);
-        width: 250%;
+        width: 100%;
         margin-top: 20px;
         box-shadow: 5px 5px 0px rgb(145, 145, 145);
         transition: 400ms;
@@ -776,6 +819,32 @@ footer ul li a {
     .card26:hover {
         box-shadow: 5px 5px 15px rgb(145, 145, 145);
         transition: 400ms;
+    }
+
+    .cardImage3 img {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        height: 115px;
+        width: 320px;
+        object-fit: cover;
+    }
+    
+    .cardImage4 {
+        justify-content: center;
+    }
+    
+    .cardImage4 img {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        height: 115px;
+        width: 320px;
+        object-fit: cover;
+    }
+
+    .cardAside1 {
+        margin: auto;
+        margin-bottom: 20px;
+        width: 100%;
     }
 
     footer {
